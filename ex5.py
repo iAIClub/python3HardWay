@@ -6,4 +6,4 @@ my_eyes = 'Blue'
 my_teeth = 'White'
 my_hair = 'Brown'
 
-print(f"Let's talk about {my_name}.")
+print(f'Let us talk about {my_name}.')
