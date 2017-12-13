@@ -1,7 +1,7 @@
 from sys import argv
 
-script, user_name = argv
-prompt = '> '
+script, user_name, zork = argv
+prompt = ':-)> '
 
 print(f"Hi {user_name}, I'm the {script} script.")
 print("I'd like to ask you a few questions.")
@@ -18,4 +18,5 @@ print(f"""
 Alright, so you said {likes} about liking me.
 You live in {lives}. Not sure where that is.
 And you have a {computer} computer. Nice.
+You said {zork} to having played Zork.
 """)
