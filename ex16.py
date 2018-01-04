@@ -11,8 +11,10 @@ input("?")
 print("Opening the file...")
 target = open(filename, 'w')
 
-print("Truncating the file. Goodbye!")
-target.truncate()
+# Truncating is not needed since the file is being opened in 'w' write mode
+# which automatically truncates the file. Commenting out the lines below:
+# print("Truncating the file. Goodbye!")
+# target.truncate()
 
 print("Now I'm going to ask you for three line.")
 
@@ -22,12 +24,15 @@ line3 = input("line 3: ")
 
 print("I'm going to write these to the file.")
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+# Reduced 6 lines into 3 using the f string format
+target.write(f"{line1}\n")
+target.write(f"{line2}\n")
+target.write(f"{line3}\n")
+
+# Opens the file in read mode 'r', reads the contents, then prints it out
+target = open(filename, 'r')
+text_in_file = target.read()
+print(f"\n{text_in_file}")
 
 print("And finally, we close it.")
 target.close()
